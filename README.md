@@ -1,35 +1,40 @@
-# vue-dictionary
+# Vue Dictionary
 
-This template should help get you started developing with Vue 3 in Vite.
+This is my first attempt at using Vue. This app is a simple version of the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). 
 
-## Recommended IDE Setup
+A more complex version of this app was made with React:
+- React Solution URL: [Github](https://github.com/jessabc/dictionary)
+- React Live Site URL: [Dictionary app](https://dictionary-word.netlify.app)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Table of contents
 
-## Customize configuration
+- [Overview](#overview)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Overview
 
-```sh
-npm install
-```
+### Links
 
-### Compile and Hot-Reload for Development
+- Solution URL: [Github](https://github.com/jessabc/vue-dictionary)
+- Live Site URL: [Dictionary app](https://dictionary-word.netlify.app)
 
-```sh
-npm run dev
-```
+## My process
 
-### Compile and Minify for Production
+### Built with
 
-```sh
-npm run build
-```
+- Tailwind CSS
+- Vue
 
-### Lint with [ESLint](https://eslint.org/)
+### What I learned
 
-```sh
-npm run lint
-```
+- the basics of Vue 3, using the composition API
+
+### Useful resources
+
+- [Loading animation](https://www.w3schools.com/howto/howto_css_loader.asp) - I used this for the loading animation, I would like to do more loading animations in the future, I think it really adds to the project
+- [Vue 3 Crash Course](https://www.youtube.com/watch?v=KTFH4P8unUQ) 
