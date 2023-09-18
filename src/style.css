@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* loader, credit to https://www.w3schools.com/howto/howto_css_loader.asp */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #9834db;
+    border-bottom: 5px solid #9834db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
