@@ -21,7 +21,7 @@ A more complex version of this app was made with React:
 ### Links
 
 - Solution URL: [Github](https://github.com/jessabc/vue-dictionary)
-- Live Site URL: [Dictionary app](https://dictionary-word.netlify.app)
+- Live Site URL: [Dictionary app](https://vue-dictionary.netlify.app)
 
 ## My process
 
