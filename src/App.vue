@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import Search from './components/Search.vue'
 import DisplayWordDefinition from './components/DisplayWordDefinition.vue'
 
-const wordDefinition = ref([{}])
+const wordDefinition = ref([])
 const errMsg = ref(null)
 const loading = ref(false)
 

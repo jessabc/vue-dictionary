@@ -14,13 +14,12 @@ import axios from 'axios'
         try{
             const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${query.value}`)
             emit('word-definition', response.data[0])
-            query.value = ''
         }catch(err) {
             emit('error-msg', err.response.data)
+        }finally{
             query.value = ''
+            emit('loading')
         }
-
-        emit('loading')
     }
 
 </script>
