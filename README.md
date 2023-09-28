@@ -37,4 +37,5 @@ A more complex version of this app was made with React:
 ### Useful resources
 
 - [Loading animation](https://www.w3schools.com/howto/howto_css_loader.asp) - I used this for the loading animation, I would like to do more loading animations in the future, I think it really adds to the project
-- [Vue 3 Crash Course](https://www.youtube.com/watch?v=KTFH4P8unUQ) 
+- [Vue 3 Crash Course](https://www.youtube.com/watch?v=KTFH4P8unUQ)
+- [Introduction to Pinia](https://www.youtube.com/watch?v=gwcca_zd4IE)
