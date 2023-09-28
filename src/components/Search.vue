@@ -1,26 +1,10 @@
 <script setup>
-import { ref } from 'vue';
-import axios from 'axios'
+import { useQueryStore } from '../store/query'
+import { storeToRefs } from 'pinia';
 
-    const query = ref('')
-
-    const emit = defineEmits(['word-definition', 'error-msg', 'loading'])
-
-    const getWordDefinition = async () => {
-        emit('word-definition')
-        emit('loading')
-        emit('error-msg')
-
-        try{
-            const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${query.value}`)
-            emit('word-definition', response.data[0])
-        }catch(err) {
-            emit('error-msg', err.response.data)
-        }finally{
-            query.value = ''
-            emit('loading')
-        }
-    }
+    const store = useQueryStore()
+    const { query } = storeToRefs(store)  
+    const {getWordDefinition} = store
 
 </script>
 
@@ -29,7 +13,7 @@ import axios from 'axios'
         <input 
             type="text" 
             class="bg-zinc-200 w-full py-4 rounded-lg pl-5 text-lg font-semibold outline-none 50" 
-            v-model="query"  
+            v-model="query.text"  
             placeholder="Search for a word..." 
         >
         <button @click.prevent="getWordDefinition">
