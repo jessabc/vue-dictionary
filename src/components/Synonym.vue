@@ -15,12 +15,12 @@ import { storeToRefs } from 'pinia';
 
     const handleClick = () => {
         query.text = props.synonym
-        getWordDefinition()
+        getWordDefinition(query.text)
+        window.scrollTo(0,0)
     }
 </script>
 
 <template >
-    <p class="cursor-pointer text-purple-600 text-lg font-semibold hover:text-purple-500" @click="handleClick">{{ synonym }}</p>
+    <p class="cursor-pointer text-purple-600 text-lg font-semibold hover:text-purple-500" @click="handleClick(synonym)">{{ synonym }}</p>
 </template>
-
 
