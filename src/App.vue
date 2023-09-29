@@ -4,6 +4,7 @@ import Search from './components/search.vue'
 import DisplayWordDefinition from './components/DisplayWordDefinition.vue'
 import { useQueryStore } from './store/query'
 import { storeToRefs } from 'pinia';
+import Header from './components/Header.vue';
 
   const store = useQueryStore()
   const { query } = storeToRefs(store)
@@ -12,6 +13,7 @@ import { storeToRefs } from 'pinia';
 
 <template>
   <div class="px-10 max-w-2xl mx-auto  min-h-screen">
+    <Header/>
     <Search  />
 
     <DisplayWordDefinition v-for="word in query.definition" :word="word" />
