@@ -19,7 +19,7 @@ const handleThemeSwitch = () => {
 </script>
 
 <template>
-    <div className="relative flex flex-col items-center justify-center bg-green-600">
+    <div className="relative flex flex-col items-center justify-center ">
             <div className="flex">
                 <label className="inline-flex relative items-center  cursor-pointer">
                   <input
@@ -37,7 +37,10 @@ const handleThemeSwitch = () => {
                   <img v-if="theme === 'light'"
                   src="../assets/icon-moon.svg"
                   className="h-6 w-6 text-zinc-500 ml-2 dark:text-purple-500" @click="handleThemeSwitch"/> 
-                  <svg v-else xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="none" stroke="#838383" stroke-width="1"><circle cx="12" cy="12" r="4" stroke-linejoin="round"/><path stroke-linecap="round" d="M20 12h1M3 12h1m8 8v1m0-18v1m5.657 13.657l.707.707M5.636 5.636l.707.707m0 11.314l-.707.707M18.364 5.636l-.707.707"/></g></svg>
+                  <img v-else
+                  src="../assets/icon-sun.svg"
+                  className="h-6 w-6 text-zinc-500 ml-2 dark:text-purple-500" @click="handleThemeSwitch"/>
+                  <!-- <svg v-else @click="handleThemeSwitch" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><g fill="none" stroke="#838383" stroke-width="1"><circle cx="12" cy="12" r="4" stroke-linejoin="round"/><path stroke-linecap="round" d="M20 12h1M3 12h1m8 8v1m0-18v1m5.657 13.657l.707.707M5.636 5.636l.707.707m0 11.314l-.707.707M18.364 5.636l-.707.707"/></g></svg> -->
                 </label>
             </div>
         </div>
