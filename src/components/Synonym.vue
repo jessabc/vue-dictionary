@@ -20,7 +20,7 @@ import { storeToRefs } from 'pinia';
 </script>
 
 <template >
-    <p class="cursor-pointer text-purple-600 text-lg font-semibold hover:text-purple-500" @click="handleClick">{{ synonym }}</p>
+    <p class="cursor-pointer text-purple-600 text-lg font-semibold hover:text-purple-500 " @click="handleClick">{{ synonym }}</p>
 </template>
 
 
