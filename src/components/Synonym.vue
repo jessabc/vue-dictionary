@@ -15,7 +15,6 @@ import { storeToRefs } from 'pinia';
 
     const handleClick = () => {
         query.text = props.synonym
-        console.log('sss', query.text)
         getWordDefinition(query.text)
         window.scrollTo(0,0)
     }

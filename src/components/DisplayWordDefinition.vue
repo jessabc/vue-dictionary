@@ -24,24 +24,17 @@ import Meaning from './Meaning.vue';
     <button type="button" class='ml-auto hover:bg-purple-300 rounded-full'>
       <img src="../assets/icon-play.svg" alt="" @click="audio.play()"/>
     </button>
- </div>
-    
+  </div>
 
-   
-         
-   
-   
+  <Meaning v-for="meaning of word.meanings" :meaning="meaning"/>
     
-    <Meaning v-for="meaning of word.meanings" :meaning="meaning"/>
-    
-
-    <hr/>
-    <div className='flex gap-3 pt-5 pb-10 items-end flex-wrap '> 
-      <p className='text-zinc-500 text-sm dark:text-zinc-400'>Source: </p>
-      <a :href="word.sourceUrls[0]" target="_blank" class='flex gap-3 dark:text-zinc-50'>{{ word.sourceUrls[0] }}
-        <img src="../assets/icon-new-window.svg" alt="new window icon" />
-      </a>
-    </div>
+  <hr/>
+  <div className='flex gap-3 pt-5 pb-10 items-end flex-wrap '> 
+    <p className='text-zinc-500 text-sm dark:text-zinc-400'>Source: </p>
+    <a :href="word.sourceUrls[0]" target="_blank" class='flex gap-3 dark:text-zinc-50'>{{ word.sourceUrls[0] }}
+      <img src="../assets/icon-new-window.svg" alt="new window icon" />
+    </a>
+  </div>
     
 </template>
 

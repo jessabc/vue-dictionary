@@ -2,51 +2,41 @@
 import Toggle from './Toggle.vue';
 import {ref} from 'vue'
 
-const props = defineProps({
-      font: {
-          type: String,
-          required: true
-      }
-  })
+    const props = defineProps({
+        font: {
+            type: String,
+            required: true
+        }
+    })
 
-  const emit = defineEmits(['set-font'])
+    const emit = defineEmits(['set-font'])
 
-const isVisible = ref(false)
-console.log(isVisible.value)
+    const isVisible = ref(false)
 
-const toggleMenu = () => {
-    isVisible.value = !isVisible.value
-}
-console.log(props.font)
+    const toggleMenu = () => {
+        isVisible.value = !isVisible.value
+    }
 
-const displayFont = () => {
-    switch(props.font) {
-  case 'font-mono':
-    return 'Mono'
-   
-  case 'font-serif':
-    return 'Serif' 
-  
-case 'font-sans':
-    return 'Sans Serif' 
- 
-}
+    const displayFont = () => {
+        switch(props.font) {
+        case 'font-mono':
+            return 'Mono' 
+        case 'font-serif':
+            return 'Serif' 
+        case 'font-sans':
+            return 'Sans Serif' 
+        }
+    }
 
-   
-}
-
-const handleClick = (e) => {
-console.log(e.target.dataset.font)
-emit('set-font', e.target.dataset.font)
-isVisible.value = false
+    const handleClick = (e) => {
+    emit('set-font', e.target.dataset.font)
+    isVisible.value = false
 }
 
 </script>
 
 <template>
     <div class=" dark:bg-zinc-900 flex justify-between pt-5">
-
-        <!-- <img src="../assets/logo.svg" alt=""> -->
 
         <div className=' flex ml-auto'>
                 <div className='mr-5 relative cursor-pointer dark:text-zinc-50'>
@@ -56,8 +46,7 @@ isVisible.value = false
                         class='flex border-r border-solid border-zinc-300' @click="toggleMenu">
                         <p class="pr-2 font-semibold text-xl">{{displayFont()}}</p>
                         <img 
-                        
-                        src="../assets//icon-arrow-down.svg" alt="" class='mr-4'/>
+                        src="../assets/icon-arrow-down.svg" alt="down arrow" class='mr-4'/>
                     </div>
 
                      <!-- dropdown modal -->
@@ -68,7 +57,9 @@ isVisible.value = false
                     </div>
                 </div>
             </div>
+
            <Toggle/>
+           
     </div>
  
 </template>
